@@ -83,7 +83,9 @@ source activate tensorflow_cdpm
 echo "Basecalling finished!"
 echo "Checking the read accuracy..."
 cp ./fastq/workspace/pass/*.fastq $FILENAME
-cp ./fastq/workspace/pass/*.fastq ./mapping_check/test.fastq
+cp ./fastq/workspace/pass/*.fastq ./mapping_check/test.
+# minimap2 headers -H use homopolymer-compressed k-mer
+# -t number of threads 32 
 ./mapping_check/minimap2 -Hk19 -t 32 -c $FULLFILE \
 	./mapping_check/test.fastq > ./mapping_check/mapping.paf
 

@@ -119,7 +119,7 @@ if __name__ == '__main__':
 		length of the genome')
 	parser.add_argument('-c', action='store', dest='circular',
 		default=False, type=bool, help='if the genome is circular')
-
+	# what's the ns?
 	parser.add_argument('-r', action='store', dest='replace',
 		default=False, type=bool, help='if we replace the ns or delete the ns')
 
